@@ -1,0 +1,94 @@
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  min-height: 100%;
+  background-color: hsl(212, 45%, 89%);
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  margin-top: 4px;
+}
+
+.qr-code__img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challenge {
+  text-align: center;
+}
+
+.coded {
+  text-align: center;
+}
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700 */
