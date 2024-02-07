@@ -1,0 +1,146 @@
+body {
+    height: 100vh;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.maincard {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: aliceblue;
+    background-image: url( './images/bg-pattern-desktop.svg');
+    background-size: 800px 750px;
+    background-repeat: no-repeat;
+    background-position-x: -400px;
+    background-position-y: -200px;
+    border-color: 1px hsl(240, 5%, 91%);
+    border-radius: 25px;
+    box-shadow: 0px 40px 100px -30px;
+}
+
+.img-container {
+    position: relative;
+    background-image: url( './images/bg-pattern-desktop.svg');
+    background-size: 800px 750px;
+    background-repeat: no-repeat;
+    background-position-x: -400px;
+    background-position-y: -200px;
+}
+
+
+
+.womanimage {
+    width: 465px;
+    padding-top: 50px;
+    object-position: -65px;
+}
+
+.box {
+    position: absolute;
+    top: 210px;
+    left: -70px;
+    width: 145px;
+    aspect-ratio: 1/1;
+    z-index: 2;
+}
+
+.faq-text {
+    font-family: 'Kumbh Sans', cursive;
+    font-size: 12px;
+    color: hsl(238, 29%, 16%);
+    padding-top: 40px;
+
+}
+
+li {
+    margin-block: 2rem;
+
+}
+
+.question {
+    font-size: 14px;
+    color: hsl(237, 12%, 33%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    transition: 200ms ease-in-out;
+}
+
+.arrow > img {
+    width: 15px;
+}
+
+.answer {
+    color: hsl(240, 6%, 50%);
+    
+}
+
+.hidden-answer {
+    display: none;
+}
+
+
+h1 {
+    color: hsl(238, 29%, 16%);
+}
+
+
+
+
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
