@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const HeightInput = ({
   unit,
   height,
@@ -54,16 +52,6 @@ const HeightInput = ({
       )}
     </div>
   );
-};
-
-HeightInput.propTypes = {
-  unit: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
-  setHeight: PropTypes.func.isRequired,
-  feet: PropTypes.string.isRequired,
-  setFeet: PropTypes.func.isRequired,
-  inches: PropTypes.string.isRequired,
-  setInches: PropTypes.func.isRequired,
 };
 
 export default HeightInput;

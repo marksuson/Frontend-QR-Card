@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bg-custom-section {
+  border-radius: 0px 0px 35px 35px;
+  background: linear-gradient(
+    -45deg,
+    rgb(214, 230, 254) 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+  width: 978px;
+  height: 737px;
+  position: absolute;
+  z-index: -1;
+}

@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const WeightInput = ({ unit, weight, setWeight }) => {
   return (
     <div>
@@ -15,12 +13,6 @@ const WeightInput = ({ unit, weight, setWeight }) => {
       />
     </div>
   );
-};
-
-WeightInput.propTypes = {
-  unit: PropTypes.string.isRequired,
-  weight: PropTypes.string.isRequired,
-  setWeight: PropTypes.func.isRequired,
 };
 
 export default WeightInput;

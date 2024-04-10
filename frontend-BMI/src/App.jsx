@@ -2,7 +2,7 @@ import { useState } from "react";
 import UnitSelector from "./components/UnitSelector";
 import HeightInput from "./components/HeightInput";
 import WeightInput from "./components/WeightInput";
-import CalculateButton from "./components/CalculateButton";
+import Button from "./components/Button";
 import ResultsDisplay from "./components/ResultsDisplay";
 
 const App = () => {
@@ -70,36 +70,54 @@ const App = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-lg font-semibold mb-4">BMI Calculator</h2>
-      <button
-        onClick={resetInputs}
-        className="bg-gray-500 text-white p-2 mb-4 w-full"
-      >
-        <div>New Calculation</div>
-      </button>
-      <div className="mb-4">
-        <UnitSelector unit={unit} setUnit={setUnit} />
-      </div>
-      <HeightInput
-        unit={unit}
-        height={height}
-        setHeight={setHeight}
-        feet={feet}
-        setFeet={setFeet}
-        inches={inches}
-        setInches={setInches}
-      />
-      <WeightInput unit={unit} weight={weight} setWeight={setWeight} />
-      <CalculateButton calculateBMI={calculateBMI} onClick={calculateBMI} />
-      {bmi && (
-        <ResultsDisplay
-          bmi={bmi}
-          weightCategory={weightCategory}
-          idealWeight={idealWeight}
-        />
-      )}
-    </div>
+    <main>
+      <section className="relative flex flex-col-2 max-w-[1276px] max-h-[737px] font-inter mt-[-1] ml-6 gap-8">
+        <div className="bg-custom-section" />
+        <section className="w-1/2 ml-[116px]">
+          <h2 className="mb-4 text-3xl font-semibold">
+            Body Mass Index Calculator
+          </h2>
+          <Button
+            handleClick={resetInputs}
+            className="w-full p-2 mb-4 text-white bg-gray-500"
+          >
+            New Calculation
+          </Button>
+        </section>
+        <section className="flex flex-col items-center justify-center w-1/2">
+          <div className="mb-4">
+            <UnitSelector
+              unit={unit}
+              setUnit={setUnit}
+              resetInputs={resetInputs}
+            />
+          </div>
+          <HeightInput
+            unit={unit}
+            height={height}
+            setHeight={setHeight}
+            feet={feet}
+            setFeet={setFeet}
+            inches={inches}
+            setInches={setInches}
+          />
+          <WeightInput unit={unit} weight={weight} setWeight={setWeight} />
+          <Button
+            handleClick={calculateBMI}
+            className="w-full p-2 text-white bg-blue-500"
+          >
+            Calculate BMI
+          </Button>
+          {bmi && (
+            <ResultsDisplay
+              bmi={bmi}
+              weightCategory={weightCategory}
+              idealWeight={idealWeight}
+            />
+          )}
+        </section>
+      </section>
+    </main>
   );
 };
 

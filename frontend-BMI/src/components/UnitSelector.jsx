@@ -1,6 +1,9 @@
-import PropTypes from "prop-types";
+const UnitSelector = ({ unit, setUnit, resetInputs }) => {
+  const handleUnitChange = (newUnit) => {
+    setUnit(newUnit);
+    resetInputs();
+  };
 
-const UnitSelector = ({ unit, setUnit }) => {
   return (
     <div className="mb-4">
       <label className="inline-flex items-center mr-4">
@@ -9,7 +12,7 @@ const UnitSelector = ({ unit, setUnit }) => {
           name="unit"
           value="metric"
           checked={unit === "metric"}
-          onChange={() => setUnit("metric")}
+          onChange={() => handleUnitChange("metric")}
           className="form-radio"
         />
         <span className="ml-2">Metric</span>
@@ -20,18 +23,13 @@ const UnitSelector = ({ unit, setUnit }) => {
           name="unit"
           value="imperial"
           checked={unit === "imperial"}
-          onChange={() => setUnit("imperial")}
+          onChange={() => handleUnitChange("imperial")}
           className="form-radio"
         />
         <span className="ml-2">Imperial</span>
       </label>
     </div>
   );
-};
-
-UnitSelector.propTypes = {
-  unit: PropTypes.string.isRequired,
-  setUnit: PropTypes.func.isRequired,
 };
 
 export default UnitSelector;
